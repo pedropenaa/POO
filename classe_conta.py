@@ -60,6 +60,10 @@ class Conta:
     def limite(self, novo_limite):
         self.__limite = novo_limite
 
+    @staticmethod
+    def codigo_banco():
+        return {"BB": "001", "Caixa": "104", "Bradesco": "237"}
+
     
     
 
