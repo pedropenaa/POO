@@ -19,7 +19,7 @@ class Programa:
 
     @nome.setter
     def nome(self, novo_nome):
-        self._nome = novo_nome.tittle()
+        self._nome = novo_nome.title()
 
 
     def  __str__ (self):
@@ -54,28 +54,50 @@ class Serie(Programa):
 
 
 
+class Playlist(list):
+    def __init__(self, nome, progamas):
+        self.nome = nome
+        self.programas = progamas
 
 
 
+    
 
 
 
+ 
 
-# EXEMPLO DE FILMEEEEE
+
+
 vingadores = Filme("Vingadores guerra infinita", 2018, 160)
-vingadores.dar_like()
-
-
-
-
-# EXEMPLO DE SERIE
+todo_mundo_panico = Filme("Todo mundo em panico", 1999,100 )
+demolidor= Serie("Demolidor",2016,2)
 atlanta = Serie("Atlanta", 2018, 2)
+
+
+
+vingadores.dar_like()
+vingadores.dar_like()
+vingadores.dar_like()
+vingadores.dar_like()
+demolidor.dar_like()
+demolidor.dar_like()
+todo_mundo_panico.dar_like()
+todo_mundo_panico.dar_like()
 atlanta.dar_like()
 atlanta.dar_like()
 
 
 
 
-filmes_e_series = [vingadores, atlanta]
-for programa in filmes_e_series:
+
+filmes_e_series = [vingadores, atlanta, demolidor, todo_mundo_panico]
+playlist_fim_de_semana = Playlist("Fim de Semana", filmes_e_series)
+
+
+
+
+
+
+for programa in playlist_fim_de_semana.programas:
     print(programa)
