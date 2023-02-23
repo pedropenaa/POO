@@ -54,14 +54,22 @@ class Serie(Programa):
 
 
 
-class Playlist(list):
-    def __init__(self, nome, progamas):
+class Playlist():
+    def __init__(self, nome, programas):
         self.nome = nome
-        self.programas = progamas
-
-
+        self._programas = programas
 
     
+
+
+    @property
+    def listagem(self):
+        return self._programas
+
+
+    @property
+    def tamanho(self):
+         return len(self._programas)
 
 
 
@@ -99,5 +107,9 @@ playlist_fim_de_semana = Playlist("Fim de Semana", filmes_e_series)
 
 
 
-for programa in playlist_fim_de_semana.programas:
+for programa in playlist_fim_de_semana:
     print(programa)
+
+
+
+
