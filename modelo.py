@@ -16,9 +16,9 @@ class Programa:
     def nome(self):
         return self._nome
 
-    @nome.setter
-    def nome(self, novo_nome):
-        self._nome = novo_nome.title()
+    #@nome.setter
+    #def nome(self, novo_nome):
+        #self._nome = novo_nome.title()
 
 
     def  __str__ (self):
@@ -52,7 +52,7 @@ class Serie(Programa):
 
 class Playlist():
     def __init__(self, nome, programas):
-        self.nome = nome
+        self._nome = nome
         self._programas = programas
 
 
@@ -111,6 +111,11 @@ print(f"Tamanho da Playlist: {len(playlist_fim_de_semana)}")
 
 for programa in playlist_fim_de_semana:
     print(programa)
+
+
+
+
+print(vingadores.nome)
 
 
 
