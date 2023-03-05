@@ -6,3 +6,7 @@ FILME:                SERIE:
 - NOME                - NOME
 - ANO                 - ANO
 - DURAÇÂO             - TEMPORADAS
+
+
+
+Exercios de Logica com POO em python para estudos
